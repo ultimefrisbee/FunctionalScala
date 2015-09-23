@@ -15,8 +15,8 @@ The course is hands on; most units introduce short programs that serve as illust
 
 The assignments are currently in the SBT project structure of --
 
-src/main/scala/com/assigments/week# 
+src/main/scala/com/assignments/week# 
 
-src/test/scala/com/assigments/week#
+src/test/scala/com/assignments/week#
 
 Take a peek at that weeks README, src, and corresponding tests
