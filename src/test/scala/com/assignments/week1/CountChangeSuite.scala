@@ -3,6 +3,7 @@ package com.assignments.week1
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
+import org.scalameter._
 
 @RunWith(classOf[JUnitRunner])
 class CountChangeSuite extends FunSuite {
@@ -12,7 +13,10 @@ class CountChangeSuite extends FunSuite {
   }
 
   test("countChange: sorted CHF") {
-    assert(countChange(300,List(5,10,20,50,100,200,500)) === 1022)
+    val time = measure {
+      assert(countChange(300,List(5,10,20,50,100,200,500)) === 1022)
+    }
+    println(s"countChange: sorted CHF Total time: $time")
   }
 
   test("countChange: no pennies") {
@@ -20,6 +24,9 @@ class CountChangeSuite extends FunSuite {
   }
 
   test("countChange: unsorted CHF") {
-    assert(countChange(300,List(500,5,50,100,20,200,10)) === 1022)
+    val time = measure {
+      assert(countChange(300,List(500,5,50,100,20,200,10)) === 1022)
+    }
+    println(s"countChange: unsorted CHF Total time: $time")
   }
 }
